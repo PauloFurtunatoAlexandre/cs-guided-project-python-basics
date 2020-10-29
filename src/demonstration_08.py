@@ -10,6 +10,16 @@ Examples:
 - num_args(True, False) ➞ 2
 - num_args({}) ➞ 1
 """
-def num_args():
-    # Your code here
 
+
+def num_args(*args):
+    # Your code here
+    # create a lable to hold the number of arguments
+    # return the number of arguments
+    return (len(args))
+
+
+print(num_args())
+print(num_args("foo"))
+print(num_args("foo", "bar"))
+print(num_args(True, False))

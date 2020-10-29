@@ -14,7 +14,37 @@ Examples:
 - XO("ooxXm") ➞ True (Case insensitive)
 - XO("zpzpzpp") ➞ True (Returns True if no x and o)
 - XO("zzoo") ➞ False
-"""
-def XO(txt):
-    # Your code here
 
+# set an o and x counter to zero
+# Loop over each character in the string
+# do a check if it contains an x
+# increment x counter
+# do a check if it contains an o
+# increment o counter
+# check if x counter is equal to o counter
+# otherwise return false
+"""
+
+
+# def XO(txt):
+# Your code here
+# o_counter = 0
+# x_counter = 0
+# for char in txt:
+#     if char == "o" or char == "O":
+#         x_counter += 1
+#     elif char == "x" or char == "X":
+#         o_counter += 1
+
+# if x_counter == o_counter:
+#     return True
+# else:
+#     return False
+
+def XO(txt: str) -> bool:
+    lower_txt = txt.lower()
+    return lower_txt.count("x") == lower_txt.count("o")
+
+
+print(XO("xxoo"))
+print(XO("xoxoo"))
